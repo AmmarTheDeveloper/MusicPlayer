@@ -1,0 +1,217 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    font-family:'Poppins' , sans-serif;
+}
+html{
+    scroll-behavior:smooth;
+}
+/* navbar section starts here */
+
+.navbar{
+    display:flex;
+    justify-content:start;
+    align-items:center;
+    background:#1b1b1b;
+    height:65px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding-inline:20px;
+}
+.navbar .logo{
+    display:inline-flex;
+    justify-content:center;
+    align-items: center;
+    margin-right:20px;
+}
+.navbar .logo img{
+    width:50px;
+    border-radius:50%;
+}
+.navbar .logo span{
+    color:white;
+    font-size:20px;
+    font-weight:500;
+    padding-left:5px;
+}
+.navbar nav a{
+    color:white;
+    font-size:15px;
+    font-weight:500;
+    margin-inline:10px;
+    transition:all 0.3s ease;
+}
+.navbar nav a:hover{
+    color:blue;
+}
+
+/* music section starts here */
+
+#music{
+    padding:50px 5px;
+}
+#music .container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#music .container .music-container{
+    margin-top:40px;
+    border-radius:5px;
+    background:rgba(0,0,0,0.5) url('images/music-bg2.jpg');
+    background-size:100%;
+    background-blend-mode: multiply;
+    padding:20px;
+    width:1000px;
+    min-height:600px;
+}
+#music .container .music-container h1{
+    color:white;
+    font-size:25px;
+    font-weight:500;
+    margin-bottom:70px;
+}
+#music .container .musics{
+    width:350px;
+}
+#music .container .musics .music{
+    background:white;
+    border-radius:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:45px;
+    padding-inline:5px;
+    padding-right:15px;
+    overflow:hidden;
+    margin-bottom:7px;
+}
+#music .container .musics .music .img{
+    padding-left:5px;
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+#music .container .musics .music img{
+    width:30px;
+    border-radius:45%;
+}
+#music .container .musics .music .control i{
+    cursor:pointer;
+    font-size:18px;
+    color:black;
+    padding-left:5px;
+}
+/* progressbar design starts here */
+.progressbar{
+    background:black;
+    width:100%;
+    padding:20px;
+    color:white;
+    font-size:22px;
+    text-align:center;
+}
+.progressbar input{
+    width:90%;
+    cursor:pointer;
+}
+.progressbar .song-info{
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    column-gap:20px;
+    position:relative;
+}
+.progressbar .song-info .song-title{
+    position:absolute;
+    font-size:14px;
+    left:0;
+    top:-20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.progressbar .song-info .song-title img{
+    width:100px;
+    opacity:0;
+    transition:all 0.3s ease;
+    border-radius:50%;
+}
+.progressbar .song-info .song-title.active img{
+    opacity:1;
+}
+
+.progressbar .song-info .icons span{
+    border:2px solid white;
+    width:45px;
+    height:45px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    border-radius:50%;
+    transition:all 0.3s ease;
+    cursor:pointer;
+}
+.progressbar .song-info .icons span:hover{
+    border-color:blue;
+}
+.progressbar .icons i{
+    margin-inline:10px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+.progressbar .song-info .icons i:hover , .progressbar .song-info .icons span:hover i{
+    color:blue;
+}
+.progressbar .song-info .icons .fa-play{
+    padding-left:3px;
+}
+/* responsive design starts here */
+@media only screen and (max-width:1100px){
+    #music .container .music-container{
+        width:100%;
+    }
+}
+@media screen and (max-width:750px){
+    #music .container .music-container h1{
+        font-size:20px;
+    }
+    .progressbar{
+        padding-inline:10px;
+    }
+    .progressbar input{
+        width:100%;
+    }
+    .progressbar .song-info .icons{
+        margin-top:45px;
+    }
+}
+@media screen and (max-width:425px){
+    #music .container .music-container .musics{
+        width:100%;
+    }
+}
+footer{
+    background:#1b1b1b;
+    color:white;
+    font-size:15px;
+    font-weight:500;
+    padding:15px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    color:crimson;
+    transition:all 0.3s ease;
+}
+footer a:hover{
+    text-decoration:underline;
+}
